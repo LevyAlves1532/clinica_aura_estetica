@@ -28,7 +28,8 @@
                     <?php $cButton([
                         'label' => 'Conversar com o concierge no WhatsApp',
                         'preffixIcon' => '<span class="material-symbols-outlined" aria-hidden="true">chat</span>',
-                        'url' => '#reserva',
+                        'url' => 'https://wa.me/47991966719',
+                        'target' => '_blank',
                         'color' => 'secondary',
                         'class' => 'reservation__contact-button',
                     ]); ?>

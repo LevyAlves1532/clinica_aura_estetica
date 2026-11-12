@@ -17,11 +17,11 @@
             <?php $cButton([
                 'label' => 'Agende sua avaliação exclusiva',
                 'suffixIcon' => '<span aria-hidden="true">→</span>',
-                'url' => '#avaliacao',
+                'url' => '#reserva',
             ]); ?>
             <?php $cButton([
                 'label' => 'Conheça os protocolos',
-                'url' => '#protocolos',
+                'url' => '#resultados',
                 'color' => 'secondary',
             ]); ?>
         </div>

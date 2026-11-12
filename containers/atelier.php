@@ -72,7 +72,7 @@
             </div>
             <?php $cButton([
                 'label' => 'Agendar consulta inicial',
-                'url' => '#avaliacao',
+                'url' => '#reserva',
                 'class' => 'atelier__callout-button',
             ]); ?>
         </aside>
