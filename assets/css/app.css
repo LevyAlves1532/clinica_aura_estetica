@@ -36,6 +36,7 @@ body {
 	min-width: 320px;
 	min-height: 100vh;
 	margin: 0;
+	padding-top: 4.5rem;
 	background: var(--color-secondary-light);
 	color: var(--color-neutral);
 	font-family: var(--font-body);
@@ -134,7 +135,10 @@ svg {
 
 /* Main navigation */
 .site-header {
-	position: relative;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
 	z-index: 10;
 	background: rgba(255, 250, 246, 0.94);
 	border-bottom: 1px solid rgba(90, 84, 77, 0.08);
@@ -651,6 +655,7 @@ svg {
 
 	body {
 		font-size: 0.9375rem;
+		padding-top: 4.25rem;
 	}
 
 	.site-header__container {
