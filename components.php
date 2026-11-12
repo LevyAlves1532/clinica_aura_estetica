@@ -11,6 +11,7 @@ $components = [
     'cFormationCard' => 'formation-card.php',
     'cRegenerationCard' => 'regeneration-card.php',
     'cTestimonialCard' => 'testimonial-card.php',
+    'cJourneyItem' => 'journey-item.php',
 ];
 
 foreach ($components as $compName => $compPath) {

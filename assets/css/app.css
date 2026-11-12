@@ -1007,6 +1007,99 @@ svg {
 	font-size: 0.62rem;
 }
 
+/* Customer journey */
+.journey {
+	padding-block: clamp(5rem, 9vw, 7.5rem);
+	background: #fff9f5;
+}
+
+.journey__container {
+	display: grid;
+	gap: clamp(3.5rem, 7vw, 5.5rem);
+}
+
+.journey__header {
+	max-width: 43rem;
+}
+
+.journey__eyebrow {
+	margin-bottom: 0.8rem;
+	color: var(--color-primary-dark);
+	font-size: 0.62rem;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.journey__title {
+	font-size: clamp(2.25rem, 4vw, 3.35rem);
+	font-weight: 400;
+	letter-spacing: -0.045em;
+}
+
+.journey__description {
+	max-width: 40rem;
+	margin-top: 1rem;
+	color: var(--color-tertiary);
+	font-size: clamp(0.85rem, 1.2vw, 0.98rem);
+	line-height: 1.7;
+}
+
+.journey__grid {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: clamp(1.25rem, 2.5vw, 2rem);
+}
+
+.journey-item {
+	position: relative;
+	padding-top: 0.15rem;
+}
+
+.journey-item::before {
+	position: absolute;
+	top: 0.65rem;
+	right: 0;
+	left: 2.45rem;
+	height: 1px;
+	background: rgba(90, 84, 77, 0.12);
+	content: "";
+}
+
+.journey-item.is-active::before {
+	background: var(--color-primary);
+}
+
+.journey-item__number {
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	padding-right: 0.75rem;
+	background: #fff9f5;
+	color: var(--color-secondary-dark);
+	font-family: var(--font-display);
+	font-size: 1.25rem;
+	line-height: 1;
+}
+
+.journey-item.is-active .journey-item__number {
+	color: var(--color-primary-dark);
+}
+
+.journey-item__title {
+	margin-top: 1.15rem;
+	font-size: clamp(1.05rem, 1.5vw, 1.3rem);
+	font-weight: 500;
+	line-height: 1.35;
+}
+
+.journey-item__description {
+	margin-top: 0.65rem;
+	color: var(--color-tertiary);
+	font-size: 0.76rem;
+	line-height: 1.65;
+}
+
 /* Hero banner */
 .hero {
 	position: relative;
@@ -1437,6 +1530,19 @@ svg {
 	.testimonial-card {
 		min-height: 0;
 	}
+
+	.journey {
+		padding-block: 4rem;
+	}
+
+	.journey__grid {
+		grid-template-columns: 1fr;
+		gap: 2.5rem;
+	}
+
+	.journey-item::before {
+		right: 0;
+	}
 }
 
 @media (min-width: 641px) and (max-width: 960px) {
@@ -1479,6 +1585,10 @@ svg {
 	}
 
 	.testimonials__grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.journey__grid {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
 }
