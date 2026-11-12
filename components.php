@@ -13,6 +13,8 @@ $components = [
     'cTestimonialCard' => 'testimonial-card.php',
     'cJourneyItem' => 'journey-item.php',
     'cFaqItem' => 'faq-item.php',
+    'cReservationBenefit' => 'reservation-benefit.php',
+    'cFormField' => 'form-field.php',
 ];
 
 foreach ($components as $compName => $compPath) {
