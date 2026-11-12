@@ -19,6 +19,7 @@
     </head>
     <body>
         
+        <?php include('./containers/header.php'); ?>
         <?php include('./containers/banner.php'); ?>
 
         <script src="./assets/js/app.js"></script>
