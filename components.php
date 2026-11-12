@@ -5,6 +5,7 @@ $folderComponents = './components/';
 $components = [
     'cButton' => 'button.php',
     'cMetric' => 'metric.php',
+    'cFeatureCard' => 'feature-card.php',
 ];
 
 foreach ($components as $compName => $compPath) {
