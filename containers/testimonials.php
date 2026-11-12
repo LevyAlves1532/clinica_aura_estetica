@@ -1,4 +1,4 @@
-<section class="testimonials" id="depoimentos" aria-labelledby="testimonials-title">
+<section class="testimonials" id="testimonials" aria-labelledby="testimonials-title">
     <div class="container testimonials__container">
         <header class="testimonials__header">
             <div>

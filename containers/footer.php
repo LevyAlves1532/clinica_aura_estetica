@@ -44,9 +44,9 @@
         <div class="site-footer__column site-footer__institutional">
             <h2>Institucional</h2>
             <nav aria-label="Links institucionais">
-                <a href="#protocolos">Tratamentos</a>
-                <a href="#clinica">Corpo Clínico</a>
-                <a href="#faq">Protocolos Seguros</a>
+                <a href="#clinica">Tratamentos</a>
+                <a href="#depoimentos">Corpo Clínico</a>
+                <a href="#resultados">Protocolos Seguros</a>
                 <a href="#reserva">Canal de Ética</a>
             </nav>
         </div>

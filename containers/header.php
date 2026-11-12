@@ -14,10 +14,10 @@
         </button>
 
         <nav class="site-header__navigation" id="main-navigation" aria-label="Navegação principal">
-            <a href="#protocolos">Tratamentos</a>
-            <a href="#clinica">A clínica</a>
-            <a href="#resultados">Resultados</a>
-            <a href="#depoimentos">Depoimentos</a>
+            <a href="#clinica">Tratamentos</a>
+            <a href="#depoimentos">A clínica</a>
+            <a href="#resultados-clinicos">Resultados</a>
+            <a href="#testimonials">Depoimentos</a>
             <a href="#faq">FAQ</a>
         </nav>
 
