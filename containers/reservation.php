@@ -27,7 +27,7 @@
                     <p class="reservation__contact-label">Prefere agilizar via mensagem?</p>
                     <?php $cButton([
                         'label' => 'Conversar com o concierge no WhatsApp',
-                        'suffixIcon' => '<span class="material-symbols-outlined" aria-hidden="true">chat</span>',
+                        'preffixIcon' => '<span class="material-symbols-outlined" aria-hidden="true">chat</span>',
                         'url' => '#reserva',
                         'color' => 'secondary',
                         'class' => 'reservation__contact-button',
@@ -35,7 +35,7 @@
                 </div>
             </div>
 
-            <div class="reservation__panel" role="group" aria-labelledby="reservation-form-title">
+            <form class="reservation__panel" id="reservation-form" aria-labelledby="reservation-form-title">
                 <h3 class="reservation__panel-title" id="reservation-form-title">Solicitar Pré-Reserva</h3>
                 <p class="reservation__panel-description">
                     Preencha os campos abaixo e nosso concierge entrará em contato em até 2 horas úteis.
@@ -51,7 +51,7 @@
                         'id' => 'reservation-phone',
                         'label' => 'WhatsApp / Telefone',
                         'type' => 'tel',
-                        'placeholder' => '(11) 90000-0000',
+                        'placeholder' => '(99) 9 9999-9999',
                     ]); ?>
                     <?php $cFormField([
                         'id' => 'reservation-treatment',
@@ -67,15 +67,13 @@
                     ]); ?>
                 </div>
 
-                <?php $cButton([
-                    'label' => 'Solicitar agendamento privativo',
-                    'suffixIcon' => '<span class="material-symbols-outlined" aria-hidden="true">event_available</span>',
-                    'url' => '#reserva',
-                    'class' => 'reservation__submit',
-                ]); ?>
+                <button class="button button--primary reservation__submit" type="submit">
+                    Solicitar agendamento privativo
+                    <span class="material-symbols-outlined" aria-hidden="true">event_available</span>
+                </button>
 
                 <p class="reservation__privacy">Em conformidade rigorosa com a LGPD. Seus dados nunca serão compartilhados.</p>
-            </div>
+            </form>
         </div>
     </div>
 </section>

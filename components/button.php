@@ -1,5 +1,6 @@
 <?php
     $label = $props['label'] ?? '';
+    $preffixIcon = $props['preffixIcon'] ?? '';
     $suffixIcon = $props['suffixIcon'] ?? '';
     $url = $props['url'] ?? '';
     $class = $props['class'] ?? '';
@@ -10,6 +11,7 @@
 ?>
 
 <a class="button <?= $color ?> <?= $class ?>" href="<?= $url ?>">
+    <?= $preffixIcon ?>
     <?= $label ?>
     <?= $suffixIcon ?>
 </a>

@@ -1864,14 +1864,23 @@ svg {
 }
 
 .reservation-field__choice {
-	display: grid;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.35rem;
 	min-height: 2.1rem;
-	place-items: center;
+	padding: 0.35rem;
 	border-radius: 0.4rem;
 	background: var(--color-white);
 	color: var(--color-neutral);
 	font-size: 0.62rem;
 	text-align: center;
+	cursor: pointer;
+}
+
+.reservation-field__choice input {
+	margin: 0;
+	accent-color: var(--color-primary-dark);
 }
 
 .reservation__submit {

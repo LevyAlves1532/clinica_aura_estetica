@@ -45,4 +45,82 @@
             }
         });
     });
+
+    const reservationForm = document.querySelector('#reservation-form');
+
+    if (reservationForm) {
+        const phoneField = reservationForm.querySelector('#reservation-phone');
+
+        function formatPhoneNumber(value) {
+            let digits = value.replace(/\D/g, '');
+
+            if ((digits.length === 12 || digits.length === 13) && digits.startsWith('55')) {
+                digits = digits.slice(2);
+            }
+
+            digits = digits.slice(0, 11);
+
+            if (digits.length === 0) {
+                return '';
+            }
+
+            let formatted = '(' + digits.slice(0, 2);
+
+            if (digits.length >= 3) {
+                formatted += ') ' + digits[2];
+            }
+            if (digits.length > 3) {
+                formatted += ' ' + digits.slice(3, 7);
+            }
+            if (digits.length > 7) {
+                formatted += '-' + digits.slice(7, 11);
+            }
+
+            return formatted;
+        }
+
+        phoneField.addEventListener('input', function () {
+            const selectionStart = phoneField.selectionStart ?? phoneField.value.length;
+            const digitsBeforeCaret = phoneField.value.slice(0, selectionStart).replace(/\D/g, '').length;
+            const formattedValue = formatPhoneNumber(phoneField.value);
+
+            phoneField.value = formattedValue;
+
+            let caretPosition = 0;
+            let digitsAtCaret = 0;
+
+            while (caretPosition < formattedValue.length && digitsAtCaret < digitsBeforeCaret) {
+                if (/\d/.test(formattedValue[caretPosition])) {
+                    digitsAtCaret += 1;
+                }
+                caretPosition += 1;
+            }
+
+            phoneField.setSelectionRange(caretPosition, caretPosition);
+
+            const digitCount = formattedValue.replace(/\D/g, '').length;
+            phoneField.setCustomValidity(
+                digitCount === 0 || digitCount === 11
+                    ? ''
+                    : 'Informe um celular com DDD e 11 dígitos.'
+            );
+        });
+
+        reservationForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const formData = new FormData(reservationForm);
+            const message = [
+                'Olá! Gostaria de solicitar uma pré-reserva na Aura.',
+                '',
+                'Nome: ' + formData.get('reservation-name').trim(),
+                'WhatsApp: ' + formData.get('reservation-phone').trim(),
+                'Tratamento de interesse: ' + formData.get('reservation-treatment'),
+                'Período de preferência: ' + formData.get('reservation-period'),
+            ].join('\n');
+            const whatsappUrl = 'https://wa.me/5547991966719?text=' + encodeURIComponent(message);
+
+            window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+        });
+    }
 })();
