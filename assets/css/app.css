@@ -1100,6 +1100,100 @@ svg {
 	line-height: 1.65;
 }
 
+/* Frequently asked questions */
+.faq {
+	padding-block: clamp(5rem, 9vw, 7.5rem);
+	background: #faf1eb;
+}
+
+.faq__container {
+	display: grid;
+	gap: clamp(2.5rem, 5vw, 3.5rem);
+}
+
+.faq__header {
+	max-width: 44rem;
+	margin-inline: auto;
+	text-align: center;
+}
+
+.faq__eyebrow {
+	margin-bottom: 0.85rem;
+	color: var(--color-primary-dark);
+	font-size: 0.62rem;
+	font-weight: 700;
+	letter-spacing: 0.09em;
+	text-transform: uppercase;
+}
+
+.faq__title {
+	font-size: clamp(2.25rem, 4vw, 3.35rem);
+	font-weight: 400;
+	letter-spacing: -0.045em;
+}
+
+.faq__description {
+	margin-top: 1rem;
+	color: var(--color-tertiary);
+	font-size: clamp(0.85rem, 1.2vw, 0.98rem);
+	line-height: 1.7;
+}
+
+.faq__list {
+	display: grid;
+	gap: 0.85rem;
+	width: min(100%, 42rem);
+	margin-inline: auto;
+}
+
+.faq-item {
+	overflow: hidden;
+	border: 1px solid rgba(90, 84, 77, 0.08);
+	border-radius: 0.55rem;
+	background: var(--color-white);
+	box-shadow: 0 0.25rem 0.8rem rgba(90, 84, 77, 0.025);
+}
+
+.faq-item__trigger {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	width: 100%;
+	padding: 1.15rem 1.25rem;
+	border: 0;
+	background: transparent;
+	color: var(--color-neutral);
+	font-family: var(--font-display);
+	font-size: clamp(1rem, 1.7vw, 1.18rem);
+	font-weight: 500;
+	line-height: 1.35;
+	text-align: left;
+}
+
+.faq-item__trigger:hover,
+.faq-item__trigger:focus-visible {
+	color: var(--color-primary-dark);
+}
+
+.faq-item__icon {
+	flex-shrink: 0;
+	color: var(--color-primary-dark);
+	font-size: 1.25rem;
+	transition: transform 180ms ease;
+}
+
+.faq-item.is-open .faq-item__icon {
+	transform: rotate(180deg);
+}
+
+.faq-item__answer {
+	padding: 0 1.25rem 1.2rem;
+	color: var(--color-tertiary);
+	font-size: 0.78rem;
+	line-height: 1.65;
+}
+
 /* Hero banner */
 .hero {
 	position: relative;
@@ -1542,6 +1636,23 @@ svg {
 
 	.journey-item::before {
 		right: 0;
+	}
+
+	.faq {
+		padding-block: 4rem;
+	}
+
+	.faq__list {
+		width: 100%;
+	}
+
+	.faq-item__trigger {
+		padding: 1rem;
+		font-size: 1rem;
+	}
+
+	.faq-item__answer {
+		padding-inline: 1rem;
 	}
 }
 

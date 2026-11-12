@@ -22,4 +22,27 @@
             menuToggle.querySelector('.sr-only').textContent = 'Abrir menu';
         });
     });
+
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(function (item) {
+        const trigger = item.querySelector('.faq-item__trigger');
+        const answer = item.querySelector('.faq-item__answer');
+
+        trigger.addEventListener('click', function () {
+            const isOpen = item.classList.contains('is-open');
+
+            faqItems.forEach(function (otherItem) {
+                otherItem.classList.remove('is-open');
+                otherItem.querySelector('.faq-item__trigger').setAttribute('aria-expanded', 'false');
+                otherItem.querySelector('.faq-item__answer').hidden = true;
+            });
+
+            if (!isOpen) {
+                item.classList.add('is-open');
+                trigger.setAttribute('aria-expanded', 'true');
+                answer.hidden = false;
+            }
+        });
+    });
 })();
