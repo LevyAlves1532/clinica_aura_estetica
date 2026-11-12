@@ -25,6 +25,7 @@
         <?php include('./containers/atelier.php'); ?>
         <?php include('./containers/doctor.php'); ?>
         <?php include('./containers/regeneration.php'); ?>
+        <?php include('./containers/testimonials.php'); ?>
 
         <script src="./assets/js/app.js"></script>
     </body>
