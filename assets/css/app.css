@@ -30,6 +30,7 @@
 
 html {
 	scroll-behavior: smooth;
+	overflow-x: hidden;
 }
 
 body {
@@ -37,6 +38,7 @@ body {
 	min-height: 100vh;
 	margin: 0;
 	padding-top: 4.5rem;
+	overflow-x: hidden;
 	background: var(--color-secondary-light);
 	color: var(--color-neutral);
 	font-family: var(--font-body);
@@ -755,6 +757,127 @@ svg {
 	line-height: 1.4;
 }
 
+/* Clinical results */
+.regeneration {
+	padding-block: clamp(5rem, 10vw, 8rem);
+	background: #fff9f5;
+}
+
+.regeneration__container {
+	display: grid;
+	gap: clamp(2.5rem, 5vw, 4rem);
+}
+
+.regeneration__header {
+	max-width: 52rem;
+	margin-inline: auto;
+	text-align: center;
+}
+
+.regeneration__eyebrow {
+	margin-bottom: 0.85rem;
+	color: var(--color-primary-dark);
+	font-size: 0.62rem;
+	font-weight: 700;
+	letter-spacing: 0.09em;
+	text-transform: uppercase;
+}
+
+.regeneration__title {
+	font-size: clamp(2.2rem, 4vw, 3.45rem);
+	font-weight: 400;
+	letter-spacing: -0.045em;
+}
+
+.regeneration__description {
+	max-width: 40rem;
+	margin: 1rem auto 0;
+	color: var(--color-tertiary);
+	font-size: clamp(0.82rem, 1.2vw, 0.96rem);
+	line-height: 1.7;
+}
+
+.regeneration__grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: clamp(1.25rem, 2.5vw, 2rem);
+}
+
+.regeneration-card {
+	min-height: 12.5rem;
+	padding: 1.65rem;
+	border: 1px solid rgba(90, 84, 77, 0.08);
+	border-radius: 0.85rem;
+	background: var(--color-white);
+	box-shadow: 0 0.5rem 1.5rem rgba(90, 84, 77, 0.025);
+	text-align: center;
+	transition: box-shadow 180ms ease, transform 180ms ease;
+}
+
+.regeneration-card:hover {
+	box-shadow: 0 1rem 2rem rgba(90, 84, 77, 0.1);
+	transform: translateY(-0.25rem);
+}
+
+.regeneration-card__value {
+	display: grid;
+	place-items: center;
+	width: 3.25rem;
+	height: 3.25rem;
+	margin: 0 auto 1.2rem;
+	border-radius: 0.65rem;
+	background: #fff0d7;
+	color: var(--color-primary-dark);
+	font-family: var(--font-display);
+	font-size: 1.1rem;
+}
+
+.regeneration-card__title {
+	font-size: clamp(1.1rem, 1.7vw, 1.35rem);
+	font-weight: 500;
+}
+
+.regeneration-card__description {
+	max-width: 18rem;
+	margin: 0.65rem auto 0;
+	color: var(--color-tertiary);
+	font-size: 0.7rem;
+	line-height: 1.6;
+}
+
+.regeneration__notice {
+	display: flex;
+	align-items: flex-start;
+	gap: 0.8rem;
+	width: min(100%, 50rem);
+	margin-inline: auto;
+	padding: 1.15rem 1.35rem;
+	border-radius: 0.65rem;
+	background: #f5ede7;
+	color: var(--color-tertiary);
+}
+
+.regeneration__notice > .material-symbols-outlined {
+	flex-shrink: 0;
+	margin-top: 0.05rem;
+	color: var(--color-primary-dark);
+	font-size: 1.15rem;
+}
+
+.regeneration__notice strong {
+	display: block;
+	color: var(--color-neutral);
+	font-size: 0.6rem;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+}
+
+.regeneration__notice p {
+	margin-top: 0.3rem;
+	font-size: 0.65rem;
+	line-height: 1.55;
+}
+
 /* Hero banner */
 .hero {
 	position: relative;
@@ -1148,6 +1271,22 @@ svg {
 	.doctor__formations {
 		grid-template-columns: 1fr;
 	}
+
+	.regeneration {
+		padding-block: 4rem;
+	}
+
+	.regeneration__grid {
+		grid-template-columns: 1fr;
+	}
+
+	.regeneration-card {
+		min-height: 0;
+	}
+
+	.regeneration__notice {
+		padding: 1rem;
+	}
 }
 
 @media (min-width: 641px) and (max-width: 960px) {
@@ -1183,6 +1322,10 @@ svg {
 
 	.doctor__formations {
 		grid-template-columns: 1fr;
+	}
+
+	.regeneration__grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
 }
 

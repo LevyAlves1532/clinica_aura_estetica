@@ -9,6 +9,7 @@ $components = [
     'cFilterButton' => 'filter-button.php',
     'cTreatmentCard' => 'treatment-card.php',
     'cFormationCard' => 'formation-card.php',
+    'cRegenerationCard' => 'regeneration-card.php',
 ];
 
 foreach ($components as $compName => $compPath) {
