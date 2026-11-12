@@ -16,7 +16,26 @@
     });
 
     navigation.querySelectorAll('a').forEach(function (link) {
-        link.addEventListener('click', function () {
+        link.addEventListener('click', function (event) {
+            const targetSelector = link.getAttribute('href');
+            const target = targetSelector ? document.querySelector(targetSelector) : null;
+
+            if (target) {
+                event.preventDefault();
+
+                const header = document.querySelector('.site-header');
+                const headerOffset = (header ? header.offsetHeight : 0) + 16;
+                const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerOffset;
+                const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+                window.scrollTo({
+                    top: Math.max(0, targetPosition),
+                    behavior: prefersReducedMotion ? 'auto' : 'smooth',
+                });
+
+                window.history.replaceState(null, '', targetSelector);
+            }
+
             navigation.classList.remove('is-open');
             menuToggle.setAttribute('aria-expanded', 'false');
             menuToggle.querySelector('.sr-only').textContent = 'Abrir menu';

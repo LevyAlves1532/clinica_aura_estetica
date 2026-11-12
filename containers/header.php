@@ -24,7 +24,7 @@
         <div class="site-header__actions">
             <?php $cButton([
                 'label' => 'Agendar avaliação',
-                'url' => '#avaliacao',
+                'url' => '#reserva',
                 'class' => 'button--header',
             ]); ?>
             <a class="site-header__profile" href="#clinica" aria-label="Conheça a Dra. Elena Rossi">
