@@ -29,6 +29,7 @@
         <?php include('./containers/journey.php'); ?>
         <?php include('./containers/faq.php'); ?>
         <?php include('./containers/reservation.php'); ?>
+        <?php include('./containers/footer.php'); ?>
 
         <script src="./assets/js/app.js"></script>
     </body>

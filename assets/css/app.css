@@ -1893,6 +1893,143 @@ svg {
 	text-align: center;
 }
 
+/* Site footer */
+.site-footer {
+	padding-top: clamp(3.5rem, 7vw, 5.5rem);
+	background: #fbf4ef;
+	color: var(--color-tertiary);
+}
+
+.site-footer__content {
+	display: grid;
+	grid-template-columns: 1.45fr 1.25fr 1.2fr 0.85fr;
+	gap: clamp(2rem, 4vw, 4rem);
+	padding-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+.site-footer__brand,
+.site-footer__brand > span {
+	display: inline-flex;
+	align-items: center;
+}
+
+.site-footer__brand {
+	gap: 0.45rem;
+}
+
+.site-footer__brand-mark {
+	color: var(--color-primary);
+	font-family: var(--font-display);
+	font-size: 1.4rem;
+	line-height: 1;
+	transform: rotate(-18deg);
+}
+
+.site-footer__brand strong,
+.site-footer__brand small {
+	display: block;
+}
+
+.site-footer__brand strong {
+	color: var(--color-neutral);
+	font-family: var(--font-display);
+	font-size: 1.15rem;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	line-height: 1;
+}
+
+.site-footer__brand small {
+	margin-top: 0.2rem;
+	color: var(--color-primary-dark);
+	font-size: 0.58rem;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	line-height: 1;
+	text-transform: uppercase;
+}
+
+.site-footer__description {
+	max-width: 19rem;
+	margin-top: 1.1rem;
+	font-size: 0.82rem;
+	line-height: 1.7;
+}
+
+.site-footer__medical {
+	display: grid;
+	gap: 0.2rem;
+	margin-top: 1.35rem;
+	font-size: 0.7rem;
+}
+
+.site-footer__medical strong,
+.site-footer__hours strong {
+	color: var(--color-neutral);
+	font-size: 0.62rem;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+}
+
+.site-footer__column h2 {
+	margin-bottom: 0.85rem;
+	color: var(--color-neutral);
+	font-size: 1.15rem;
+	font-weight: 600;
+}
+
+.site-footer__column address,
+.site-footer__column,
+.site-footer__contact-list,
+.site-footer__institutional nav {
+	font-size: 0.72rem;
+	font-style: normal;
+	line-height: 1.75;
+}
+
+.site-footer__hours {
+	display: grid;
+	gap: 0.05rem;
+	margin-top: 1rem;
+}
+
+.site-footer__contact-list,
+.site-footer__institutional nav {
+	display: grid;
+	gap: 0.35rem;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.site-footer a {
+	transition: color 180ms ease;
+}
+
+.site-footer a:hover,
+.site-footer a:focus-visible {
+	color: var(--color-primary-dark);
+}
+
+.site-footer__bottom {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1.5rem;
+	min-height: 3.7rem;
+	border-top: 1px solid rgba(90, 84, 77, 0.12);
+	font-size: 0.64rem;
+}
+
+.site-footer__bottom nav {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	gap: clamp(1rem, 2.5vw, 2rem);
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+}
+
 @media (max-width: 760px) {
 	.reservation {
 		padding-block: 3.5rem;
@@ -1914,6 +2051,42 @@ svg {
 
 	.reservation__panel {
 		padding: 1.25rem;
+	}
+
+	.site-footer {
+		padding-top: 3.5rem;
+	}
+
+	.site-footer__content {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 2.5rem 1.5rem;
+		padding-bottom: 3rem;
+	}
+
+	.site-footer__brand-column {
+		grid-column: 1 / -1;
+	}
+
+	.site-footer__bottom {
+		align-items: flex-start;
+		flex-direction: column;
+		gap: 0.75rem;
+		padding-block: 1.25rem;
+	}
+
+	.site-footer__bottom nav {
+		justify-content: flex-start;
+		gap: 0.65rem 1.25rem;
+	}
+}
+
+@media (max-width: 460px) {
+	.site-footer__content {
+		grid-template-columns: 1fr;
+	}
+
+	.site-footer__brand-column {
+		grid-column: auto;
 	}
 }
 
