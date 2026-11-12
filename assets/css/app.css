@@ -413,6 +413,207 @@ svg {
 	text-transform: uppercase;
 }
 
+/* Treatment atelier */
+.atelier {
+	padding-block: clamp(5rem, 9vw, 7.5rem);
+	background: #fff9f5;
+}
+
+.atelier__container {
+	display: grid;
+	gap: clamp(2.5rem, 5vw, 3.8rem);
+}
+
+.atelier__header {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	gap: 2rem;
+}
+
+.atelier__eyebrow {
+	margin-bottom: 0.8rem;
+	color: var(--color-primary-dark);
+	font-size: 0.62rem;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.atelier__title {
+	font-size: clamp(2.25rem, 4vw, 3.35rem);
+	font-weight: 400;
+	letter-spacing: -0.045em;
+}
+
+.atelier__filters {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	gap: 0.5rem;
+}
+
+.atelier-filter {
+	min-height: 1.9rem;
+	padding: 0.45rem 1rem;
+	border: 0;
+	border-radius: 999px;
+	background: #f4ece6;
+	color: var(--color-tertiary);
+	font-size: 0.58rem;
+	font-weight: 600;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.atelier-filter:hover,
+.atelier-filter:focus-visible {
+	background: var(--color-secondary);
+	color: var(--color-neutral);
+	transform: translateY(-1px);
+}
+
+.atelier-filter.is-active {
+	background: var(--color-primary);
+	color: var(--color-white);
+}
+
+.atelier__grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: clamp(1.25rem, 2.5vw, 2rem);
+}
+
+.treatment-card {
+	overflow: hidden;
+	border: 1px solid rgba(90, 84, 77, 0.08);
+	border-radius: 0.85rem;
+	background: var(--color-white);
+	box-shadow: 0 0.5rem 1.5rem rgba(90, 84, 77, 0.025);
+	transition: box-shadow 180ms ease, transform 180ms ease;
+}
+
+.treatment-card:hover {
+	box-shadow: 0 1rem 2rem rgba(90, 84, 77, 0.1);
+	transform: translateY(-0.25rem);
+}
+
+.treatment-card__image-wrapper {
+	position: relative;
+	height: clamp(12rem, 19vw, 16rem);
+	overflow: hidden;
+}
+
+.treatment-card__image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 400ms ease;
+}
+
+.treatment-card:hover .treatment-card__image {
+	transform: scale(1.04);
+}
+
+.treatment-card__tag {
+	position: absolute;
+	top: 0.75rem;
+	left: 0.75rem;
+	padding: 0.3rem 0.7rem;
+	border-radius: 999px;
+	background: rgba(255, 255, 255, 0.92);
+	color: var(--color-primary-dark);
+	font-size: 0.58rem;
+	font-weight: 700;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+}
+
+.treatment-card__body {
+	display: flex;
+	flex-direction: column;
+	min-height: 13.5rem;
+	padding: 1.4rem 1.5rem 1.1rem;
+}
+
+.treatment-card__title {
+	font-size: clamp(1.15rem, 1.6vw, 1.4rem);
+	font-weight: 500;
+	line-height: 1.35;
+}
+
+.treatment-card__description {
+	margin-top: 0.7rem;
+	color: var(--color-tertiary);
+	font-size: 0.76rem;
+	line-height: 1.65;
+}
+
+.treatment-card__footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	margin-top: auto;
+	padding-top: 1rem;
+	border-top: 1px solid rgba(90, 84, 77, 0.08);
+	color: var(--color-primary-dark);
+	font-size: 0.62rem;
+}
+
+.treatment-card__duration {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.3rem;
+}
+
+.treatment-card__duration .material-symbols-outlined {
+	font-size: 0.9rem;
+}
+
+.treatment-card__link {
+	font-size: 0.6rem;
+	font-weight: 700;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	transition: color 180ms ease;
+}
+
+.treatment-card__link:hover,
+.treatment-card__link:focus-visible {
+	color: var(--color-neutral);
+}
+
+.atelier__callout {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 2rem;
+	padding: clamp(1.5rem, 4vw, 2.7rem) clamp(1.5rem, 4vw, 3rem);
+	border-radius: 0.85rem;
+	background: #f8f0eb;
+}
+
+.atelier__callout h3 {
+	font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+	font-weight: 500;
+}
+
+.atelier__callout p {
+	max-width: 38rem;
+	margin-top: 0.45rem;
+	color: var(--color-tertiary);
+	font-size: 0.78rem;
+	line-height: 1.65;
+}
+
+.atelier__callout-button {
+	min-width: 13rem;
+	flex-shrink: 0;
+	font-size: 0.64rem;
+}
+
 /* Hero banner */
 .hero {
 	position: relative;
@@ -758,6 +959,33 @@ svg {
 	.feature-card {
 		min-height: 0;
 	}
+
+	.atelier__header {
+		align-items: flex-start;
+		flex-direction: column;
+	}
+
+	.atelier__filters {
+		justify-content: flex-start;
+	}
+
+	.atelier__grid {
+		grid-template-columns: 1fr;
+	}
+
+	.treatment-card__image-wrapper {
+		height: min(60vw, 18rem);
+	}
+
+	.atelier__callout {
+		align-items: stretch;
+		flex-direction: column;
+		gap: 1.25rem;
+	}
+
+	.atelier__callout-button {
+		width: 100%;
+	}
 }
 
 @media (min-width: 641px) and (max-width: 960px) {
@@ -775,6 +1003,10 @@ svg {
 	}
 
 	.standards__grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.atelier__grid {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
 }
