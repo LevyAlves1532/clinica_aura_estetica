@@ -614,6 +614,147 @@ svg {
 	font-size: 0.64rem;
 }
 
+/* Doctor profile */
+.doctor {
+	padding-block: clamp(5rem, 9vw, 7.5rem);
+	background: #faf1eb;
+}
+
+.doctor__container {
+	display: grid;
+	grid-template-columns: minmax(18rem, 0.85fr) minmax(0, 1.15fr);
+	gap: clamp(3rem, 7vw, 6.5rem);
+	align-items: center;
+}
+
+.doctor__visual {
+	display: grid;
+	gap: 1.25rem;
+}
+
+.doctor__portrait-wrapper {
+	height: clamp(28rem, 39vw, 35rem);
+	overflow: hidden;
+	border-radius: 0.9rem;
+	box-shadow: var(--shadow-soft);
+}
+
+.doctor__portrait {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center top;
+}
+
+.doctor__credential {
+	display: flex;
+	align-items: center;
+	gap: 0.8rem;
+	min-height: 4.4rem;
+	padding: 1rem 1.25rem;
+	border-radius: 0.65rem;
+	background: var(--color-white);
+	box-shadow: 0 0.5rem 1.5rem rgba(90, 84, 77, 0.04);
+}
+
+.doctor__credential > .material-symbols-outlined {
+	color: var(--color-primary-dark);
+	font-size: 1.6rem;
+}
+
+.doctor__credential strong,
+.doctor__credential span {
+	display: block;
+}
+
+.doctor__credential strong {
+	color: var(--color-neutral);
+	font-size: 0.68rem;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+}
+
+.doctor__credential div span {
+	margin-top: 0.15rem;
+	color: var(--color-tertiary);
+	font-size: 0.68rem;
+}
+
+.doctor__content {
+	max-width: 37rem;
+}
+
+.doctor__eyebrow {
+	margin-bottom: 1.2rem;
+	color: var(--color-primary-dark);
+	font-size: 0.62rem;
+	font-weight: 700;
+	letter-spacing: 0.09em;
+	text-transform: uppercase;
+}
+
+.doctor__title {
+	font-size: clamp(2.6rem, 4.5vw, 4rem);
+	font-weight: 400;
+	letter-spacing: -0.05em;
+}
+
+.doctor__registration {
+	margin-top: 1.25rem;
+	color: var(--color-tertiary);
+	font-size: 0.62rem;
+	font-weight: 600;
+	letter-spacing: 0.07em;
+	line-height: 1.5;
+	text-transform: uppercase;
+}
+
+.doctor__description {
+	margin-top: 1.4rem;
+	color: var(--color-tertiary);
+	font-size: clamp(0.88rem, 1.2vw, 1rem);
+	line-height: 1.75;
+}
+
+.doctor__quote {
+	margin: 1.6rem 0 2rem;
+	padding: 1.35rem 1.5rem;
+	border-left: 2px solid var(--color-primary-dark);
+	border-radius: 0 0.55rem 0.55rem 0;
+	background: rgba(255, 255, 255, 0.42);
+	color: var(--color-neutral);
+	font-family: var(--font-display);
+	font-size: clamp(1.15rem, 2vw, 1.55rem);
+	font-style: italic;
+	line-height: 1.3;
+}
+
+.doctor__formations {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 0.8rem;
+}
+
+.formation-card {
+	min-height: 4.4rem;
+	padding: 1rem 0.9rem;
+	border-radius: 0.35rem;
+	background: var(--color-white);
+}
+
+.formation-card h3 {
+	color: var(--color-primary-dark);
+	font-size: 1.05rem;
+	font-weight: 600;
+}
+
+.formation-card p {
+	margin-top: 0.25rem;
+	color: var(--color-tertiary);
+	font-size: 0.65rem;
+	line-height: 1.4;
+}
+
 /* Hero banner */
 .hero {
 	position: relative;
@@ -986,6 +1127,27 @@ svg {
 	.atelier__callout-button {
 		width: 100%;
 	}
+
+	.doctor {
+		padding-block: 4rem;
+	}
+
+	.doctor__container {
+		grid-template-columns: 1fr;
+		gap: 2.5rem;
+	}
+
+	.doctor__portrait-wrapper {
+		height: min(115vw, 32rem);
+	}
+
+	.doctor__content {
+		max-width: none;
+	}
+
+	.doctor__formations {
+		grid-template-columns: 1fr;
+	}
 }
 
 @media (min-width: 641px) and (max-width: 960px) {
@@ -1008,6 +1170,19 @@ svg {
 
 	.atelier__grid {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.doctor__container {
+		grid-template-columns: 0.8fr 1.2fr;
+		gap: 2.5rem;
+	}
+
+	.doctor__portrait-wrapper {
+		height: 28rem;
+	}
+
+	.doctor__formations {
+		grid-template-columns: 1fr;
 	}
 }
 
